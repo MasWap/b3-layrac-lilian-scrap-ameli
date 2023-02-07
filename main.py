@@ -31,5 +31,4 @@ with open("doctors.csv", "w", newline="") as file:
     writer.writeheader()
     writer.writerows(doctors)
 
-# for i in range(min(20, len(doctors))):
-#     print(doctors[i])
+print(doctors)
