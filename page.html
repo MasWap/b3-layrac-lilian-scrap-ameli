@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Annuaire santé d'ameli.fr : trouver un médecin, un hôpital...</title> <link href="/resources_ver/20220302095149/images/accueil/favicon.ico" rel="shortcut icon"/>
+<link href="/resources_ver/20220302095149/images/accueil/favicon.ico" rel="icon"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="L’annuaire santé de l’Assurance Maladie pour trouver un médecin, un kiné… Tarifs – Horaires – Spécialités - Localisation" name="description"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/><link href="/resources_ver/20220302095149/css/ui-lightness/jquery-ui-1.10.3.custom.min.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://fonts.googleapis.com/css?family=Droid+Sans:700,400" media="all" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/geoportail.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/ol3/ol.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/ol3/GpPluginOl3.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/tooltipster.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/styles_new.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/resources_ver/20220302095149/css/accueil.css" media="screen" rel="stylesheet" type="text/css"/>
+<!--[if IE]><link href="/resources_ver/20220302095149/css/styles_ie_new.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]><link href="/resources_ver/20220302095149/css/styles_ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+<link href="/resources_ver/20220302095149/css/print_new.css" media="print" rel="stylesheet" type="text/css"/><script src="/resources_ver/20220302095149/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/ol3/ol.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/ol3/GpPluginOl3.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/GpOl3.utils.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/ol3/ol3-popup.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/selectmenu.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/jquery.popin.40.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/jquery.popin.autocomplete.pack.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/config_autocomplete.uncompressed.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/tarteaucitron/tarteaucitron.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/scripts-accueil.uncompressed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    tarteaucitron.init({
+                    "privacyUrl": "",
+                    "hashtag": "#tarteaucitron",
+                    "cookieName": "tarteaucitron",
+                    "orientation": "bottom",
+                    "groupServices": false,
+                    "showAlertSmall": false,
+                    "cookieslist": false,
+                    "showIcon": false,
+                    "iconSrc": "data:image/png;base64,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",
+                    "iconPosition": "BottomLeft",
+                    "adblocker": false,
+                    "DenyAllCta" : true,
+                    "AcceptAllCta" : true,
+                    "highPrivacy": true,
+                    "handleBrowserDNTRequest": true,
+                    "removeCredit": true,
+                    "moreInfoLink": true,
+                    "useExternalCss": false,
+                    "readmoreLink": "",
+                    "mandatory": true
+                });    //]]>
+</script>
+<script src="/resources_ver/20220302095149/js/BrowserDetect.js" type="text/javascript"></script>
+<script src="/resources_ver/20220302095149/js/scripts.uncompressed.js" type="text/javascript"></script></head>
+<body>
+<div class="accueil" id="site">
+<div id="entete">
+<a href="/" title=""><img alt="L'Assurance Maladie" class="logoam" src="/resources_ver/20220302095149/images/logo_annuaire_sante.svg"/></a>
+<div class="acces">
+<a href="https://assure.ameli.fr" target="_blank">Accéder au compte ameli</a>
+</div>
+</div>
+<div id="site_inner">
+<div id="hautsite"></div>
+<div id="centresite">
+<form action="/recherche.html" method="post">
+<div class="choix-ps-es" id="div-je-recherche-un-PS">
+<h2>Je recherche un professionnel de santé :</h2>
+<div class="buttonType">
+<a class="selected" href="/accessible-professionnels-de-sante.html" id="buttonPS" style="display:none">
+<span class="btnRadio"><span class="state">Un professionnel de santé<br/><div class="exemple">Un médecin, un chirurgien-dentiste, une infirmière...</div></span></span>
+</a>
+<input name="type" type="hidden" value=""/>
+<div class="clear"></div>
+</div>
+</div>
+<div class="accueil-pre-choix">
+<h2>Avec l'annuaire santé d'ameli.fr</h2>
+<ol>
+<li>
+<h3>Recherchez <span>sur plusieurs critères</span></h3>
+<ul>
+<li>La profession</li>
+<li>La proximité</li>
+<li>Le type d'honoraires</li>
+<li>L’équipement carte Vitale</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<h3>Trouvez</h3>
+<ul>
+<li>Les coordonnées</li>
+<li>Le détail de l’activité</li>
+<li>Les horaires de consultation</li>
+<li>Les durées d’hospitalisation</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<h3>Comparez</h3>
+<ul>
+<li>Les tarifs</li>
+<li>Les bases de remboursement</li>
+<li>...</li>
+</ul>
+</li>
+</ol>
+<div class="clear"></div>
+</div>
+<fieldset class="interieure">
+<legend class="criteres">Je renseigne au moins 1 des 4 critères ci-dessous :</legend>
+<div class="affiche-ps">
+<div class="bloc_criteres_container">
+<div class="bloc_critere bloc_nom ps">
+<div class="bloc_critere_inner">
+<label for="formNomPs">Nom</label>
+<span class="input">
+<input id="formNomPs" name="ps_nom" type="text" value=""/>
+</span>
+<div class="exemple">Ex. : Durand, Jean Dupont</div>
+<!-- -->
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div> <div class="bloc_critere bloc_prof ps">
+<div class="bloc_critere_inner">
+<label for="formPro">Profession <span>Saisissez la profession ou sélectionnez-la dans la liste</span></label>
+<div class="autocompleteContainer">
+<input id="formProId" name="ps_profession" type="hidden" value=""/>
+<span class="input">
+<input class="ui-autocomplete-input" id="formPro" name="ps_profession_label" type="text" value=""/>
+</span>
+</div>
+<div class="exemple">Ex. : Ophtalmologiste</div>
+<div class="lien popin-autocomplete-link popin-autocomplete-link-enable">
+<a class="popin-autocomplete-ps-professions popin-autocomplete-enable" href="#">Liste des professions</a>
+<span class="popin-autocomplete-disable">Liste des professions</span> <img class="popin-autocomplete-disable" src="/resources_ver/20220302095149/images/accueil/ajax-loader.gif"/>
+</div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div> <div class="bloc_critere bloc_acte ps">
+<div class="bloc_critere_inner">
+<label for="formActePs">Acte <span>Saisissez l'acte ou sélectionnez-le dans la liste</span></label>
+<div class="autocompleteContainer">
+<input id="formActePsId" name="ps_acte" type="hidden" value=""/>
+<span class="input">
+<input class="ui-autocomplete-input" id="formActePs" name="ps_acte_label" type="text" value=""/>
+</span>
+</div>
+<div class="exemple">Ex. : chirurgie de la cataracte</div>
+<div class="lien popin-autocomplete-link popin-autocomplete-link-enable">
+<a class="popin-autocomplete-ps-actes popin-autocomplete-enable" href="#">Liste des actes</a>
+<span class="popin-autocomplete-disable">Liste des actes</span> <img class="popin-autocomplete-disable" src="/resources_ver/20220302095149/images/accueil/ajax-loader.gif"/>
+</div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="bloc_critere criteres-sup ps">
+<div class="bloc_critere_inner">
+<div class="colonne visible">
+<h2>Type d'honoraires</h2>
+<a href="#">Qu'est-ce que c'est ?</a>
+<label for="formSecteur-button">Sélectionner un type d'honoraires</label>
+<select id="formSecteur" name="ps_type_honoraire">
+<option value="indifferent">Indifférent</option>
+</select>
+</div>
+<div class="colonne visible">
+<h2>Carte Vitale <a href="/fenetre-modale-xhr-accueil/en-savoir-plus-cartevitale.html">En savoir plus</a></h2>
+<ul>
+<li><input checked="checked" id="formCarteVitaleIndifferent" name="ps_carte_vitale" type="radio" value="2"/><label for="formCarteVitaleIndifferent">Indifférent</label></li>
+<li><input id="formCarteVitaleOui" name="ps_carte_vitale" type="radio" value="1"/><label for="formCarteVitaleOui">Oui</label></li>
+<li><input id="formCarteVitaleNon" name="ps_carte_vitale" type="radio" value="0"/><label for="formCarteVitaleNon">Non</label></li>
+</ul>
+</div>
+<div class="colonne visible">
+<h2>Femme/Homme</h2>
+<ul>
+<li><input checked="checked" id="formSexeIndifferent" name="ps_sexe" type="radio" value="2"/><label for="formSexeIndifferent">Indifférent</label></li>
+<li><input id="formSexeFemme" name="ps_sexe" type="radio" value="1"/><label for="formSexeFemme">Un professionnel féminin</label></li>
+<li><input id="formSexeHomme" name="ps_sexe" type="radio" value="0"/><label for="formSexeHomme">Un professionnel masculin</label></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div></div>
+<div class="affiche-es">
+<div class="bloc_criteres_container">
+<div class="bloc_critere bloc_etb es">
+<div class="bloc_critere_inner">
+<label for="formNomEs">Nom</label>
+<div class="autocompleteContainer">
+<span class="input">
+<input class="ui-autocomplete-input" id="formNomEs" name="es_nom" type="text" value=""/>
+</span>
+<div class="exemple">Ex. : Clinique de l'Orangerie</div>
+<!-- -->
+</div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div> <div class="bloc_critere bloc_spe es">
+<div class="bloc_critere_inner">
+<label for="formSpe">Spécialité <span>Saisissez la spécialité ou sélectionnez-la dans la liste</span></label>
+<div class="autocompleteContainer">
+<script>
+									var initFormSpeItemAutocomplete = null;
+    						</script>
+<input id="formSpeId" name="es_specialite" type="hidden" value=""/>
+<span class="input">
+<input class="ui-autocomplete-input" id="formSpe" name="es_specialite_label" type="text" value=""/>
+</span>
+</div>
+<div class="exemple">Ex. : Ophtalmologie</div>
+<div class="lien popin-autocomplete-link popin-autocomplete-link-enable">
+<a class="popin-autocomplete-es-specialites popin-autocomplete-enable" href="#">Liste des spécialités</a>
+<span class="popin-autocomplete-disable">Liste des spécialités</span> <img class="popin-autocomplete-disable" src="/resources_ver/20220302095149/images/accueil/ajax-loader.gif"/>
+</div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div> <div class="bloc_critere bloc_acte es">
+<div class="bloc_critere_inner">
+<label for="formActeEs">Acte <span>Saisissez l'acte ou la maladie ou sélectionnez-le dans la liste</span></label>
+<div class="autocompleteContainer">
+<input id="formActeEsId" name="es_actes_maladies" type="hidden" value=""/>
+<span class="input">
+<input class="ui-autocomplete-input" id="formActeEs" name="es_actes_maladies_label" type="text" value=""/>
+</span>
+</div>
+<span class="exemple">Ex. : Chirurgie de la cataracte</span>
+<div class="lien popin-autocomplete-link popin-autocomplete-link-enable">
+<a class="popin-autocomplete-es-actes popin-autocomplete-enable" href="#">Liste des actes et des maladies</a>
+<span class="popin-autocomplete-disable">Liste des actes et des maladies</span> <img class="popin-autocomplete-disable" src="/resources_ver/20220302095149/images/accueil/ajax-loader.gif"/>
+</div>
+<div class="lien no-actes" style="display:none;">
+			La liste des actes et maladies associés à cette spécialité n'est pas disponible.
+		</div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div> <div class="clear"></div>
+</div>
+<div class="bloc_critere criteres-sup es">
+<div class="bloc_critere_inner">
+<div class="colonne statut">
+<h2>Statut de l'établissement de soins</h2>
+<a class="popin-status-es" href="/fenetre-modale-xhr-accueil/questcequecest-type-etb.html">Qu'est-ce que c'est ? </a>
+<label for="formTypeEtb">Sélectionner le statut de l'établissement</label>
+<select id="formTypeEtb" name="es_type">
+<option value="3">Indifférent</option>
+<option value="1">Établissement public ou privé d’intérêt collectif</option>
+<option value="2">Établissement privé</option>
+</select>
+</div>
+<div class="clear"></div>
+</div>
+<div class="bloc_critere_3"><div></div></div>
+</div></div>
+<div class="bloc_critere ou">
+<div class="bloc_critere_inner">
+<label for="formOu" style="float:left;">Où ?</label>
+<span class="input autocompleteContainer">
+<input id="formOu" name="localisation" type="text" value=""/>
+</span>
+<div class="exemple">Ex. : Rue des Acacias, 13700, Paris, 68, 971, Bretagne</div>
+<div class="clear"></div>
+<div class="proximite">
+<input checked="checked" id="formProximite" name="proximite" type="checkbox"/><label for="formProximite">à proximité de</label>
+</div>
+<input id="formOuCategory" name="localisation_category" type="hidden" value="">
+</input></div>
+<div class="bloc_critere_3"><div></div></div>
+</div>
+<div class="bloc_submit">
+<input name="submit_final" title="Rechercher" type="submit" value="Rechercher"/>
+</div> </fieldset>
+</form>
+</div>
+<div id="bassite"></div>
+</div>
+<div id="footer">
+<div class="mention">L'utilisation du service offert sur ce site est soumise au respect des conditions d'utilisation. Toute reproduction intégrale ou partielle des contenus, données et informations disponibles est illicite et peut donner lieu à des sanctions.</div>
+<div class="liens">
+<div class="titre"></div>
+<div class="site">
+<a href="https://www.ameli.fr" target="_blank"><img alt="ameli.fr" src="/resources_ver/20220302095149/images/footer_ameli.svg"/><br/><br/></a>
+<a href="https://www.ameli.fr" target="_blank">Ameli, le site de l'assurance maladie</a>
+</div>
+<div class="mise-a-dispo-donnees">
+                Dans le cadre de la politique d'ouverture et de partage des
+                données publiques, les informations présentées sur ce site sont
+                désormais disponibles sur la plateforme data.gouv.fr. Elles sont
+                réutilisables sous réserve du respect des dispositions
+                réglementaires relatives à la protection des données
+                personnelles. Les demandes d’exercice de droits des personnes
+                concernées (accès, rectification, opposition le cas échéant)
+                sont à adresser au directeur du programme annuaire-santé, à la
+                Cnam, Direction de l'Offre de Soins, 50 Avenue du Professeur
+                André Lemierre, 75020 Paris.
+            </div>
+</div>
+<div class="clear"></div>
+<div class="liens-transverse">
+<a class="thickbox firstLink" href="/trouver-un-professionnel-de-sante/" title="Trouver un professionnel de santé">Liste des professionnels de santé</a>
+<a class="thickbox" href="/fenetre-modale-xhr/mentions_legales_et_cgu.html?width=700&amp;modal=true" rel="nofollow" title="Mentions légales et CGU">Mentions légales et CGU</a>
+<a class="thickbox" href="/fenetre-modale-xhr/protection_donnees_personnelles.html?width=700&amp;modal=true" rel="nofollow" title="Protection des données personnelles">Protection des données personnelles</a>
+<a href="/" onclick="tarteaucitron.userInterface.openPanel(); return false;" title="Gestion des cookies">Gestion des cookies</a>
+<a href="https://www.data.gouv.fr/fr/datasets/annuaire-sante-de-la-cnam/" target="_blank">data.gouv.fr</a>
+</div>
+</div>
+</div>
+<input id="radius" type="hidden" value="50"/>
+<div class="bulle" style="display:none;">
+<div class="couleur">
+<div class="sens">
+<div class="container">
+<p></p>
+<div class="right"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- -->
+<script type="text/javascript">
+    //<![CDATA[
+    var resourcesPath = "/resources_ver/20220302095149";    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    function hideQuizzButton(){ $(".bloc_quizz").remove();}    //]]>
+</script>
+<script type="text/javascript">
+  xtnv = document;
+  xtsd = "https://logi7";
+  xtsite = "475098";
+  xtn2 = "2";
+  xtpage = "ameli-direct-externe::formulaire";
+  xtdi = "";
+</script>
+<script src="/resources_ver/20220302095149/js/xtcore.js" type="text/javascript"></script>
+<noscript>
+<img alt="" height="1" src="https://logi7.xiti.com/hit.xiti?s=475098&amp;s2=1&amp;p=ameli-direct-externe::formulaire&amp;di=&amp;" width="1"/>
+</noscript></body>
+</html>
